@@ -1,5 +1,5 @@
 defmodule CowboyDemo.Web.Handler do
-  def init(req, _opts) do
+  def init(req, opts) do
   text = "A cowboy is an animal herder who tends cattle on ranches in North America,
 traditionally on horseback, and often performs a multitude of other ranch-
 related tasks. The historic American cowboy of the late 19th century arose
@@ -13,6 +13,6 @@ considerable respect for their achievements. There are also cattle handlers
 in many other parts of the world, particularly South America and Australia,
 who perform work similar to the cowboy in their respective nations.\n"
     req = :cowboy_req.reply(200, %{}, text, req)
-    {:ok, req, _opts}
+    {:ok, req, opts}
   end
 end
